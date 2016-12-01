@@ -21,6 +21,19 @@ class PlaysController < ApplicationController
           end
     end
 
+    def edit
+    end
+
+    def update
+        if @play.update(play_params)
+            redirect_to play_path(@play)
+        else render 'edit'
+            end
+end
+
+    def destroy
+    end
+
     private
 
     def play_params
